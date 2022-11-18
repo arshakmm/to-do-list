@@ -1,0 +1,61 @@
+.conainer{
+    text-align: center;
+    
+}
+
+.headerName{
+    font-size: 50px;
+    padding: 60px;
+   
+} 
+
+.containerBox{
+    padding: 50px;
+}
+
+.inputBox {
+    background: no-repeat;
+    margin-right: 52px;
+    border-style: solid none;
+    height: 30px;
+    width: 550px;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+
+}
+
+.addButton {
+    border-style: none;
+    background-color: rgb(246, 10, 10);
+    height: 40px;
+    width: 90px;
+    border-radius: 17px;
+}
+
+
+.toDoList {
+    text-align: center;
+    margin-right: 52px;
+    border-radius: 5px;
+    height: 30px;
+    width: 535px;
+   
+   margin-left: 25%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+.sss{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(200, 231, 146);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 5px;
+    
+}
+
+.deleteButton{
+    background: no-repeat;
+    border-style: none;
+}
