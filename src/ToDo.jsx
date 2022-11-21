@@ -3,24 +3,30 @@ import icon from "./icon.svg";
 import './ToDo.css'
 
 const ToDo = () => {
-  const [text, setText] = useState("");
+  let [text, setText] = useState("");
   const [todos, setTodo] = useState([]);
 
   const newChange = (e) => {
     setText(e.target.value.toUpperCase());
   };
   const newAdd = () => {
-    const task ={
+    if (text===''){
+      setTodo([...todos]);
+    }else{
+          const task ={
         id:todos.length === 0 ? 1 : todos[todos.length-1].id + 1,
         taskName:text
-
-
     }
     setTodo([...todos, task]);
     setText("");
   };
+
+    }
   const deleteTodo =(id) =>{
     setTodo(todos.filter((elem) => elem.id !== id))
+  }
+  const handleDelete =() =>{
+    setTodo(todos.filter((elem) =>elem=== false))
   }
 console.log(todos)
   return (
@@ -44,13 +50,18 @@ console.log(todos)
         {todos.map((elem) => {
           return (
             <div  className="sss" key={elem}>
-                <input type="checkbox" />
+              
               {elem.taskName}
                <button className="deleteButton" onClick={() => deleteTodo(elem.id)}> <img src={icon} alt="icon" height={20} /></button> 
             </div>
+
           );
         })}
+        <div>
+        <button className="deleteAll" onClick={handleDelete}>Delete All</button>
       </div>
+      </div>
+      
     </div>
   );
 };

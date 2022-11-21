@@ -59,3 +59,10 @@
     background: no-repeat;
     border-style: none;
 }
+.deleteAll {
+    border-style: none;
+    background-color: rgb(103, 238, 114);
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+}
